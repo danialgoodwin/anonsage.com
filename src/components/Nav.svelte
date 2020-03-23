@@ -51,10 +51,11 @@
 <nav>
   <ul>
     <li><a aria-current='{segment === undefined ? "page" : undefined}' href='.'>home</a></li>
-    <li><a aria-current='{segment === "about" ? "page" : undefined}' href='about'>about</a></li>
+<!--    <li><a aria-current='{segment === "about" ? "page" : undefined}' href='about'>about</a></li>-->
 
-    <!-- for the dev link, we're using rel=prefetch so that Sapper prefetches
+    <!-- for the dev link, we're using rel=prefetch so that Sapper pre-fetches
          the dev data when we hover over the link or tap it on a touchscreen -->
     <li><a rel=prefetch aria-current='{segment === "dev" ? "page" : undefined}' href='dev'>dev</a></li>
+    <li><a rel=prefetch aria-current='{segment === "random" ? "page" : undefined}' href='random'>random</a></li>
   </ul>
 </nav>

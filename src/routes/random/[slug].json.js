@@ -5,7 +5,7 @@ import marked from 'marked'
 import hljs from 'highlight.js'
 
 const getPost = fileName =>
-    fs.readFileSync(path.resolve('content', 'dev', `${fileName}.md`), 'utf-8')
+    fs.readFileSync(path.resolve('content', 'random', `${fileName}.md`), 'utf-8')
 
 export function get(req, res, next) {
   const {slug} = req.params
