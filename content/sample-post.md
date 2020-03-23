@@ -1,8 +1,7 @@
 ---
-title: 'Sample Post'
+title: Sample Post YAML
 slug: sample-post
 ---
-# Sample Post Title
 Some text here.
 
 ## Second header

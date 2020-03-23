@@ -1,6 +1,6 @@
 {
-  "name": "TODO",
-  "description": "TODO",
+  "name": "anonsage",
+  "description": "Reading isn't free. The cost is opening your mind to a new perspective.",
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",

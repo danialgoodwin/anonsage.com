@@ -6,7 +6,6 @@
 
   h1 {
     font-size: 2.8em;
-    text-transform: uppercase;
     font-weight: 700;
     margin: 0 0 0.5em 0;
   }
@@ -21,10 +20,6 @@
     margin: 0 0 1em 0;
   }
 
-  p {
-    margin: 1em auto;
-  }
-
   @media (min-width: 480px) {
     h1 {
       font-size: 4em;
@@ -33,10 +28,10 @@
 </style>
 
 <svelte:head>
-  <title>Sapper project template</title>
+  <title>Anonsage. Think. Do. Learn</title>
 </svelte:head>
 
-<h1>Great success!</h1>
+<h1>GREAT SUCCESS!</h1>
 
 <figure>
   <img alt='Borat' src='great-success.png'>
