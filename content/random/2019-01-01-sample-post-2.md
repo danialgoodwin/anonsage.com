@@ -1,6 +1,5 @@
 ---
 title: Sample Post 2 YAML
-slug: sample-post-2
 ---
 Some text here.
 

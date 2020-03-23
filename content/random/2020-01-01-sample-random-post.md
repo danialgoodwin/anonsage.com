@@ -1,6 +1,5 @@
 ---
 title: Sample Random Post YAML
-slug: sample-random-post
 ---
 Some text here.
 
