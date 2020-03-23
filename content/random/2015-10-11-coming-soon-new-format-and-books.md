@@ -1,5 +1,5 @@
 ---
-title: Coming Soon: New Format and Books!
+title: 'Coming Soon: New Format and Books!'
 ---
 Basically, I really like this domain and I'm going to start adding more stuff to it. Unfortunately, Blogger doesn't support the kind of layout and setup that I would like, I will soon start to be using new tools and write about those specifics later.
 
