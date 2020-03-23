@@ -36,6 +36,7 @@ import { files } from '@sapper/service-worker';
 - Sapper ([issue tracker](https://github.com/sveltejs/sapper/issues))
 - Rollup
     - Provides: code-splitting, dynamic imports
+- [GitHub Pages](https://pages.github.com/)
 
 ### Eventually
 - `npm install -D @sveltejs/svelte-virtual-list` for lazy-loading lists. Only render what is visible. 
