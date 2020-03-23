@@ -4,8 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
-    "build": "sapper build",
-    "export": "sapper export",
+    "build": "sapper export && rm -rf docs/ && cp -R __sapper__/export/ docs/",
     "serve": "npx serve __sapper__/export",
     "start": "node __sapper__/build",
     "cy:run": "cypress run",
