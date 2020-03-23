@@ -44,6 +44,7 @@
 </svelte:head>
 
 <h1>{post.title}</h1>
+<small>{post.date || ''}</small>
 
 <div class='content'>
     {@html post.html}

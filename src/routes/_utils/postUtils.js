@@ -14,4 +14,4 @@ export const getAllPosts = (category) =>
             .replace('.md', '')
       }
       return grayMatter(post).data
-    })
+    }).reverse()
