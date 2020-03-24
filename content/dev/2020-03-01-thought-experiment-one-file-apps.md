@@ -83,6 +83,8 @@ Here's what that could look like at a minimum:
 
 ![Simple temperature converter app](2020-03-23-thought-experiment-one-file-apps--temperature-converter.png "Simple temperature converter app")
 
+Note: We don't need to explicitly define `celsius` because computers can easily do that algebra for us.
+
 <details>
   <summary>The HTML version of the above would take about 5 times as much code to accomplish the same thing.</summary>
   <pre>
