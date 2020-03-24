@@ -9,7 +9,7 @@ I've chosen to use the AutoHotkey scripting language rather than another tool or
 
 My goal was to map the caps lock key to the enter key. So, I created a file called `map-caps-to-enter.ahk` and put in the following code:
 
-```text
+```bash
 Capslock::
     SetCapsLockState, off
     Send, {ENTER}
@@ -20,7 +20,7 @@ Basically, that code says when the capslock key is pressed, run the following in
 
 Here's another example that does the same thing, except that it is mapping caps lock to escape, along with a few more tricks that may be needed in a more complicated environment (like running other AHK scripts):
 
-```text
+```bash
 Capslock::MyFunctionName
 
 MyFunctionName::
