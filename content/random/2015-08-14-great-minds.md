@@ -1,0 +1,6 @@
+---
+title: Great Minds
+---
+The greatest minds weren't always understood in their lifetime, same as the not-so-great minds...
+
+The greatest ideas aren't immediately understood, just like the dumbest ideas...
