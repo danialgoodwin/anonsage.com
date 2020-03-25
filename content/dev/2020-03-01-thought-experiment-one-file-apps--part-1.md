@@ -1,10 +1,10 @@
 ---
-title: 'Thought Experiment: 1-File Apps'
+title: 'Thought Experiment: 1-File Apps (Part 1)'
 tags:
 - Thought Experiment
 - Dev Design
 ---
-Imagine a theoretical programming language that would allow us to create many types of apps, each in a single file (without getting too long, as simple as possible, no boilerplate code).
+Imagine a theoretical programming language that would allow us to easily create many different types of apps, each in a single file (without getting too long, as simple as possible, and no boilerplate code).
 
 Platforms that should be supported by this theoretical language:
 - Browser extensions
@@ -30,12 +30,12 @@ At a minimum, things that every app needs (we'll add more features later):
 A simplified 1-file app could look something like the following:
 
 ```bash
-title: My App
-description: Do awesome things and stuff
-author: My Name
-contact: myemail@example.com
+title = My App
+description = Do awesome things and stuff
+author = My Name
+contact = myemail@example.com
 ---
-<content here>
+<content here or 'Hello, World!'>
 ```
 
 Now that we have that criteria listed, we can now simplify the list of needs...
@@ -45,7 +45,7 @@ What if the author or contact information changes? We don't want to have to manu
 In fact, should we just remove all information that doesn't directly affect how users see and use the app? Once the app is downloaded, users need to be able to find the app by the title (at a minimum). The rest of the fields (description, author, contact) don't affect normal usage of the app. So, to simplify the overall view of our 1-file app:
 
 ```bash
-title: My App
+title = My App
 ---
 <content here>
 ```
@@ -55,7 +55,7 @@ We really shouldn't simplify the header anymore than this. Note: This thought ex
 Now, about the app content. We need to show users **media** (text/images/video/audio) in a general **layout** with a default **color** theme defined by us developers. There's usually some **interactions** with the app, too. (Do we really have to define a color theme for users? That's a different discussion.) So, here's the basic one-file app layout now:
 
 ```bash
-title: My App
+title = My App
 ---
 <defined media>
 
@@ -69,7 +69,7 @@ title: My App
 We aren't going to stop here. So far, this could just be a regular HTML file, which can already be shown in just about all platforms. We are going to continue down this thought experiment to figure out what we _really_ want in a simple app definition. So, for fun and a sneak peak, let's create a simple app using pseudo code rather than HTML+JavaScript+CSS. Here's a potential idea for a simple converter app:
 
 ```bash
-title: Temperature Converter
+title = Temperature Converter
 ---
 define:
 fahrenheit = celsius * 1.8 + 32
@@ -81,9 +81,9 @@ show:
 
 Here's what that could look like at a minimum:
 
-![Simple temperature converter app](2020-03-23-thought-experiment-one-file-apps--temperature-converter.png "Simple temperature converter app")
+![Simple temperature converter app](../2020-03-23-thought-experiment-one-file-apps--temperature-converter.png "Simple temperature converter app")
 
-Note: We don't need to explicitly define `celsius` because computers can easily do that algebra for us.
+Note: We don't need to explicitly define `celsius` because computers can easily do that algebra for us. For the 'Simply Advanced Unit Converter' Android app I made a long time ago, it had the ability to solve equations. And, there are plenty of open source libraries that solve simple (and advanced) algebra equations.
 
 <details>
   <summary>The HTML version of the above would take about 5 times as much code to accomplish the same thing.</summary>
@@ -98,11 +98,11 @@ Note: We don't need to explicitly define `celsius` because computers can easily 
 &lt;/form></pre>
 </details>
 
-Next, we are going to add an API call for remote data. And, to speed things up, we are also going to add local (or remote) storage, which can be used for user preferences or cache. Let's jump right in, then explain things later. The pseduo [code should be intuitive](./2016-01-03-code-intuitiveness) enough.
+Next, we are going to add an API call for remote data. And, to speed things up, we are also going to add local (or remote) storage, which can be used for user preferences or cache. Let's jump right in, then explain things later. The pseudo [code should be intuitive](./2016-01-03-code-intuitiveness) enough.
 
 ```bash
-title: My TODOs
-theme: Material
+title = My TODOs
+theme = Material
 ---
 define:
 storage_key = 'tasks'
@@ -126,18 +126,8 @@ show:
 
 Here's what that could look like at a minimum:
 
-![Simple TODO list with Material theme](2020-03-23-thought-experiment-one-file-apps--material-todo.png "Simple TODO list with Material theme")
+![Simple TODO list with Material theme](../2020-03-23-thought-experiment-one-file-apps--material-todo.png "Simple TODO list with Material theme")
 
-Let's now look the above code one line (ish) at a time:
-- `local_storage = platform.storage` gets the local storage type specific for that platform. `platform` is a keyword here.
-- Both `local_storage` and `remote_storage` would have the same interface/API
-- `otherwise` keyword is similar to JavaScript's syntactic sugar for 'otherwise', aka `x = value || defaultValue`. This is also a lot easier to read than other languages' `x = storage.get(key, 'default value')'`
-- `then` keyword is similar to bash's syntactic sugar for 'then execute the following statement if the previous condition is true', aka `&&`. This is also somewhat similar to JavaScript's Promise that uses `.then(...)`.
-- `tasks.update()` will recalculate the variable's value. We bind to `tasks` changes in `<list>`
-- The last line with `template(task)=...` has an input value for the `template` _attribute_, which comes from the binded `tasks`. This automatically knows to iterates through `tasks` because it is in a `list` _view_.
-- As I was playing around, I really liked the feel of `storage(key).add(value)` compared to my first thought of `storage.append(key, value)`. We can now keep the verbs limited and more simple and matching the style of other data structures like list and set.
+We'll go line-by-line in Part 2. This article is getting long, and there are still a lot of thoughts in my head: [Thought Experiment: One-File Apps (Part 2)](./dev/2020-03-02-thought-experiment-one-file-apps--part-2) (Available now!)
 
-I've spent more than enough time on this thought experiment for today. I will eventually return to this topic. And, if I hear feedback, then that will likely motivate me to think about this again sooner. ;) 
-
-<!-- TODO: Fix link for analytics -->
-Interested in learning more about this Anonsage language? [Click here](./dev)
+<small>Update: I originally had the app's 'front matter' in the format of `title: My Title`, like how it is in YAML and for my blog's front matter. But, in order to have more consistency in the language, I decided to change the format to `title = My Title`. At least the pseudo code is consistent now. I just thought about turning all the `=` into `:`, but I'm not sure yet. Thoughts? Hmmm, maybe we keep using `=` for assignment, then `:` can be used for type declarations, if needed (it might be better without `:`).</small>

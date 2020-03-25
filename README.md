@@ -6,6 +6,13 @@
 - Preloading: Start loading the link when the user hovers over the link, rather than waiting for the click event. Feels much faster this way.
 - Static site
 
+### TODO
+- Add keyboard shortcuts `j` and `k` for navigating up and down posts
+- Add short description to post YAML to be shown on the blog posts pages
+- Add topics filter, choose one tag, and provide count?
+- Maybe add section for 'words that haven't gone together before' or haven't been together in the same sentence before. This would perhaps go in the 'wiki' section?
+- Maybe add an anonlang/ route that can act exactly like a blog, but without dates. Or, dates is fine too?
+
 
 
 ## Usage
