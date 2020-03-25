@@ -4,7 +4,8 @@
   let tags = []
 
   onMount(async () => {
-    const response = await fetch(`server.json`)
+    console.log('=========onMount()')
+    const response = await fetch(`api/tags.json`)
     tags = await response.json()
   })
 </script>
