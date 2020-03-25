@@ -8,7 +8,7 @@ _You should read [Thought Experiment: One-File Apps (Part 1)](./dev/2020-03-01-t
 
 But, here's a quick summary of Part 1 anyways: We're imagining a theoretical programming language that simplifies as much boilerplate code as possible so that we can easily create apps in a single file, or page, or screen.
 
-We are now going to continue from Part 1, where we just said that we are going to implement an API call and local (and remote) storage. It will be explained line-by-line (ish) after the code, which [should be intuitive](./2016-01-03-code-intuitiveness) enough. Basically, the user here has the ability to use either local storage or remote storage for their TODO list.
+We are now going to continue from Part 1, where we just said that we are going to implement an API call and local (and remote) storage. It will be explained line-by-line (ish) after the code, which [should be intuitive](./dev/2016-01-03-code-intuitiveness) enough. Basically, the user here has the ability to use either local storage or remote storage for their TODO list.
 
 ```bash
 title = My TODOs

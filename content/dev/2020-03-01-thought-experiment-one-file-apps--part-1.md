@@ -98,7 +98,7 @@ Note: We don't need to explicitly define `celsius` because computers can easily 
 &lt;/form></pre>
 </details>
 
-Next, we are going to add an API call for remote data. And, to speed things up, we are also going to add local (or remote) storage, which can be used for user preferences or cache. Let's jump right in, then explain things later. The pseudo [code should be intuitive](./2016-01-03-code-intuitiveness) enough.
+Next, we are going to add an API call for remote data. And, to speed things up, we are also going to add local (or remote) storage, which can be used for user preferences or cache. Let's jump right in, then explain things later. The pseudo [code should be intuitive](./dev/2016-01-03-code-intuitiveness) enough.
 
 ```bash
 title = My TODOs

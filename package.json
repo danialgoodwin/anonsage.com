@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "sapper dev",
     "build": "sapper export && rm -rf docs/ && cp -R __sapper__/export/ docs/",
-    "deploy": "npm run build && git add --all && git commit -m 'Update static files' && git push",
+    "deploy": "git add --all && git commit -m 'Update' && git push",
+    "d1": "npm run build",
+    "d2": "npm run deploy",
     "serve": "npx serve __sapper__/export",
     "start": "node __sapper__/build",
     "cy:run": "cypress run",

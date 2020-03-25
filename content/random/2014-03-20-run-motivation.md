@@ -1,5 +1,7 @@
 ---
 title: Run Motivation
+tags:
+- Motivation
 ---
 Here's the motivation I use before and during runs. It may not work for everybody.
 
