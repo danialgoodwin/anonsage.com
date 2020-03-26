@@ -37,7 +37,7 @@ show:
 
 Here's what that could look like at a minimum:
 
-![Simple TODO list with Material theme](../dev/2020-03-23-thought-experiment-one-file-apps--material-todo.png "Simple TODO list with Material theme")
+![Simple TODO list with Material theme](../dev/2020-03-02-thought-experiment-one-file-apps--material-todo.png "Simple TODO list with Material theme")
 
 Let's now look the above code one line (ish) at a time:
 - `theme: Material` is styling referencing a set of style handled by the platform. We could probably do something like `Material(orange, black)` to set the primary and secondary colors for our app. Or, we would just accept the defaults provided by the platform or user.

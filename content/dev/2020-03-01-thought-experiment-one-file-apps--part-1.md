@@ -81,7 +81,7 @@ show:
 
 Here's what that could look like at a minimum:
 
-![Simple temperature converter app](../2020-03-23-thought-experiment-one-file-apps--temperature-converter.png "Simple temperature converter app")
+![Simple temperature converter app](../dev/2020-03-01-thought-experiment-one-file-apps--temperature-converter.png "Simple temperature converter app")
 
 Note: We don't need to explicitly define `celsius` because computers can easily do that algebra for us. For the 'Simply Advanced Unit Converter' Android app I made a long time ago, it had the ability to solve equations. And, there are plenty of open source libraries that solve simple (and advanced) algebra equations.
 
@@ -126,7 +126,7 @@ show:
 
 Here's what that could look like at a minimum:
 
-![Simple TODO list with Material theme](../dev/2020-03-23-thought-experiment-one-file-apps--material-todo.png "Simple TODO list with Material theme")
+![Simple TODO list with Material theme](../dev/2020-03-02-thought-experiment-one-file-apps--material-todo.png "Simple TODO list with Material theme")
 
 We'll go line-by-line in Part 2. This article is getting long, and there are still a lot of thoughts in my head: [Thought Experiment: One-File Apps (Part 2)](./dev/2020-03-02-thought-experiment-one-file-apps--part-2) (Available now!)
 

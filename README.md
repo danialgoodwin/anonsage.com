@@ -40,7 +40,7 @@ import { files } from '@sapper/service-worker';
 
 ## Technology
 - Svelte
-- Sapper ([issue tracker](https://github.com/sveltejs/sapper/issues))
+- Sapper ([issue tracker](https://github.com/sveltejs/sapper/issues)) ([docs](https://sapper.svelte.dev/docs/))
 - Rollup
     - Provides: code-splitting, dynamic imports
 - [GitHub Pages](https://pages.github.com/)
