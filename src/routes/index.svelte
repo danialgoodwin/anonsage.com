@@ -8,7 +8,7 @@
     console.log('=========onMount()')
     const response = await fetch(`api/tags.json`)
     tags = await response.json()
-    const response2 = await fetch(`_utils/tags.json`)
+    const response2 = await fetch(`_utils/utilTags.json`)
     utilTags = await response2.json()
   })
 </script>

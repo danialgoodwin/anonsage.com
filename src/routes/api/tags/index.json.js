@@ -5,6 +5,12 @@ export function get(req, res) {
   console.log('=========api/tags/get()')
   const tags = _utils.getAllTags()
   console.log(tags)
-  console.log('=========api/get(), tags')
+  console.log('=========api/tags/get(), tags')
   res.end(JSON.stringify(tags))
+  // res.end(JSON.stringify([
+  //       "tag 1",
+  //       "tag 2",
+  //       "tag3"
+  //     ]
+  // ))
 }
