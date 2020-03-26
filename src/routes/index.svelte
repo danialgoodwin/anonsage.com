@@ -3,13 +3,22 @@
 
   let tags = []
   let utilTags = []
+  let utilTags2 = []
+  let utilTags4 = []
+  let utilTags5 = []
 
   onMount(async () => {
     console.log('=========onMount()')
-    const response = await fetch(`api/tags.json`)
-    tags = await response.json()
+    const response5 = await fetch(`utilTags.json`)
+    utilTags5 = await response5.json()
+    const response4 = await fetch(`tags.json`)
+    utilTags4 = await response4.json()
+    const response3 = await fetch(`_utils/tags.json`)
+    utilTags2 = await response3.json()
     const response2 = await fetch(`_utils/utilTags.json`)
     utilTags = await response2.json()
+    const response = await fetch(`api/tags.json`)
+    tags = await response.json()
   })
 </script>
 
@@ -42,13 +51,36 @@
 <p><strong>What software development topics are you interested in?</strong></p>
 
 <ul>
+  <li>tags</li>
   {#each tags as tag}
   <!--TODO: Create a topics/ route-->
     <li><a href="dev">{tag}</a></li>
   {/each}
 </ul>
 <ul>
+  <li>utilTags</li>
   {#each utilTags as tag}
+  <!--TODO: Create a topics/ route-->
+    <li><a href="dev">{tag}</a></li>
+  {/each}
+</ul>
+<ul>
+  <li>utilTags2</li>
+  {#each utilTags2 as tag}
+  <!--TODO: Create a topics/ route-->
+    <li><a href="dev">{tag}</a></li>
+  {/each}
+</ul>
+<ul>
+  <li>utilTags4</li>
+  {#each utilTags4 as tag}
+  <!--TODO: Create a topics/ route-->
+    <li><a href="dev">{tag}</a></li>
+  {/each}
+</ul>
+<ul>
+  <li>utilTags5</li>
+  {#each utilTags5 as tag}
   <!--TODO: Create a topics/ route-->
     <li><a href="dev">{tag}</a></li>
   {/each}
