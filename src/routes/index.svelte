@@ -1,13 +1,13 @@
 <script context="module">
-  export function preload({params, query}) {
-    return this.fetch(`api/tags.json`).then(r => r.json()).then(tags => {
-      return {tags}
-    })
-  }
+  // export function preload({params, query}) {
+  //   return this.fetch(`api/tags.json`).then(r => r.json()).then(tags => {
+  //     return {tags}
+  //   })
+  // }
 </script>
 
 <script>
-  export let tags
+  // export let tags
 </script>
 
 <!--<script>-->
