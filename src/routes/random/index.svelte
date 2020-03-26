@@ -21,6 +21,8 @@
   <title>Random Blog - Anonsage</title>
 </svelte:head>
 
+<small><em>Caution: You will likely be disappointed going through these random words. Sometimes, I'm not even sure what I was thinking.</em></small>
+
 <h1>Recent random posts</h1>
 
 <ul>

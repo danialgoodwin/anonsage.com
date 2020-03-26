@@ -18,7 +18,7 @@ export const getAllTags = () => {
   return Array.from(tags)
 }
 
-export const getAllPosts = (category) =>
+const getAllPosts = (category) =>
     fs.readdirSync(path.resolve('content', category)).map(fileName => {
       const post = fs.readFileSync(path.resolve('content', category, fileName), 'utf-8')
       grayMatter(post).data['file'] = fileName
@@ -31,3 +31,28 @@ export const getAllPosts = (category) =>
       }
       return grayMatter(post).data
     }).reverse()
+
+export const getSiblingPosts = (slug) => {
+  const posts = allDevPosts
+  const siblingPosts = {}
+  for (let i = 0; i < posts.length; i++) {
+    if (slug === posts[i]['slug']) {
+      if (i !== 0) {
+        siblingPosts['next'] = {
+          slug: posts[i - 1].slug,
+          name: posts[i - 1].title
+        }
+      }
+      if (i !== posts.length - 1) {
+        siblingPosts['previous'] = {
+          slug: posts[i + 1].slug,
+          name: posts[i + 1].title
+        }
+      }
+    }
+  }
+  return siblingPosts
+}
+
+export const allDevPosts = getAllPosts('dev')
+export const allRandomPosts = getAllPosts('random')

@@ -3,6 +3,7 @@ import fs from 'fs'
 import grayMatter from 'gray-matter'
 import marked from 'marked'
 import hljs from 'highlight.js'
+import {getSiblingPosts} from '../_utils/postUtils'
 
 const getPost = fileName =>
     fs.readFileSync(path.resolve('content', 'dev', `${fileName}.md`), 'utf-8')
@@ -23,27 +24,19 @@ export function get(req, res, next) {
     return `<pre class='language-javascriptreact'><code>${highlighted}</code></pre>`
   }
 
-  // parse the md to get front matter
-  // and the content without escaping characters
-  const {data, content} = grayMatter(post)
-
+  // parse the md to get front matter and the content without escaping characters
+  let {data, content} = grayMatter(post)
   const html = marked(content, {renderer})
 
   if (html) {
-    res.writeHead(200, {
-      'Content-Type': 'application/json'
-    })
-
+    res.writeHead(200, {'Content-Type': 'application/json'})
+    const siblingPosts = getSiblingPosts(slug)
+    data = {...data, ...siblingPosts}
     res.end(JSON.stringify({html, ...data}))
   } else {
-    res.writeHead(404, {
-      'Content-Type': 'application/json'
-    })
-
+    res.writeHead(404, {'Content-Type': 'application/json'})
     res.end(
-        JSON.stringify({
-          message: `Not found`
-        })
+        JSON.stringify({message: `Not found`})
     )
   }
 }
