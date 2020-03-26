@@ -8,9 +8,9 @@
 
 ### TODO
 - Add links for previous post and next post, if available
+    - Maybe button for random dev post and random random post too
 - Add short description to post YAML to be shown on the blog posts pages
 - Add topics filter, choose one tag, and provide count?
-- Maybe add section for 'words that haven't been together in the same sentence before'. This would perhaps go in the 'wiki' section?
 - Maybe add an anonlang/ route that can act exactly like a blog, but without dates. Or, dates is fine too?
 
 

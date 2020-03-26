@@ -2,11 +2,14 @@
   import {onMount} from 'svelte'
 
   let tags = []
+  let utilTags = []
 
   onMount(async () => {
     console.log('=========onMount()')
     const response = await fetch(`api/tags.json`)
     tags = await response.json()
+    const response2 = await fetch(`_utils/tags.json`)
+    utilTags = await response2.json()
   })
 </script>
 
@@ -39,11 +42,19 @@
 <p><strong>What software development topics are you interested in?</strong></p>
 
 <ul>
-    {#each tags as tag}
-    <!--TODO: Create a topics/ route-->
-      <li><a href="dev">{tag}</a></li>
-    {/each}
+  {#each tags as tag}
+  <!--TODO: Create a topics/ route-->
+    <li><a href="dev">{tag}</a></li>
+  {/each}
 </ul>
+<ul>
+  {#each utilTags as tag}
+  <!--TODO: Create a topics/ route-->
+    <li><a href="dev">{tag}</a></li>
+  {/each}
+</ul>
+
+
 
 <style>
   h1, figure, p {
