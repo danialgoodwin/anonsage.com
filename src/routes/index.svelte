@@ -57,35 +57,8 @@
     <li><a href="dev">{tag}</a></li>
   {/each}
 </ul>
-<ul>
-  <li>utilTags</li>
-  {#each utilTags as tag}
-  <!--TODO: Create a topics/ route-->
-    <li><a href="dev">{tag}</a></li>
-  {/each}
-</ul>
-<ul>
-  <li>utilTags2</li>
-  {#each utilTags2 as tag}
-  <!--TODO: Create a topics/ route-->
-    <li><a href="dev">{tag}</a></li>
-  {/each}
-</ul>
-<ul>
-  <li>utilTags4</li>
-  {#each utilTags4 as tag}
-  <!--TODO: Create a topics/ route-->
-    <li><a href="dev">{tag}</a></li>
-  {/each}
-</ul>
-<ul>
-  <li>utilTags5</li>
-  {#each utilTags5 as tag}
-  <!--TODO: Create a topics/ route-->
-    <li><a href="dev">{tag}</a></li>
-  {/each}
-</ul>
 
+<small><a href="api/tags">Tags</a></small>
 
 
 <style>
