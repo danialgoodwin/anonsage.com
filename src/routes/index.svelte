@@ -49,15 +49,13 @@
 
 <p><strong>What software development topics are you interested in?</strong></p>
 
-<ul>
-  <li>tags</li>
-  {#each tags as tag}
   <!--TODO: Create a topics/ route-->
-    <li><a href="dev">{tag}</a></li>
-  {/each}
-</ul>
-
-<small><a href="api/tags">Tags</a></small>
+<!--<ul>-->
+<!--  {#each tags as tag}-->
+<!--    <li><a href="dev">{tag}</a></li>-->
+<!--  {/each}-->
+<!--</ul>-->
+<!--<small><a href="api/tags">Tags</a></small>-->
 
 
 <style>

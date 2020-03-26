@@ -38,6 +38,11 @@
     background-color: transparent;
     padding: 0;
   }
+
+  .content :global() {
+    font-size: 1.5rem;
+    line-height: 1.6;
+  }
 </style>
 
 <svelte:head>
