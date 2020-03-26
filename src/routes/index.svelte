@@ -1,13 +1,25 @@
-<script>
-  import {onMount} from 'svelte'
-
-  let tags = []
-
-  onMount(async () => {
-    const response = await fetch(`api/tags.json`)
-    tags = await response.json()
-  })
+<script context="module">
+  export function preload({params, query}) {
+    return this.fetch(`api/tags.json`).then(r => r.json()).then(tags => {
+      return {tags}
+    })
+  }
 </script>
+
+<script>
+  export let tags
+</script>
+
+<!--<script>-->
+<!--  import {onMount} from 'svelte'-->
+
+<!--  let tags = []-->
+
+<!--  onMount(async () => {-->
+<!--    const response = await fetch(`api/tags.json`)-->
+<!--    tags = await response.json()-->
+<!--  })-->
+<!--</script>-->
 
 <svelte:head>
   <title>Anonsage. Think. Do. Learn</title>
