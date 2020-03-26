@@ -25,7 +25,6 @@ self.addEventListener('activate', event => {
         for (const key of keys) {
           if (key !== ASSETS) await caches.delete(key)
         }
-
         self.clients.claim()
       })
   )

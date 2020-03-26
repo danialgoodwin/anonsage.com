@@ -57,3 +57,9 @@ The app can be deployed to any environment that supports Node 10 or above. As an
 npm install -g now
 now
 ```
+
+
+
+## Notes
+- Background color: whitesmoke (#f5f5f5)
+- Theme color: Material design's 'deep orange 500' (#FF5722) 

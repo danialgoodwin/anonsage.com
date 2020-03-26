@@ -1,8 +1,8 @@
 {
-	"background_color": "#ffffff",
-	"theme_color": "#333333",
-	"name": "TODO",
-	"short_name": "TODO",
+	"background_color": "#f5f5f5",
+	"theme_color": "#FF5722",
+	"name": "Anonsage - Dev blog and stuff",
+	"short_name": "Anonsage",
 	"display": "minimal-ui",
 	"start_url": "/",
 	"icons": [
