@@ -126,7 +126,7 @@ show:
 
 Here's what that could look like at a minimum:
 
-![Simple TODO list with Material theme](../2020-03-23-thought-experiment-one-file-apps--material-todo.png "Simple TODO list with Material theme")
+![Simple TODO list with Material theme](../dev/2020-03-23-thought-experiment-one-file-apps--material-todo.png "Simple TODO list with Material theme")
 
 We'll go line-by-line in Part 2. This article is getting long, and there are still a lot of thoughts in my head: [Thought Experiment: One-File Apps (Part 2)](./dev/2020-03-02-thought-experiment-one-file-apps--part-2) (Available now!)
 
