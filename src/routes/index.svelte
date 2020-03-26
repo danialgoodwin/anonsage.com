@@ -2,21 +2,8 @@
   import {onMount} from 'svelte'
 
   let tags = []
-  let utilTags = []
-  let utilTags2 = []
-  let utilTags4 = []
-  let utilTags5 = []
 
   onMount(async () => {
-    console.log('=========onMount()')
-    const response5 = await fetch(`utilTags.json`)
-    utilTags5 = await response5.json()
-    const response4 = await fetch(`tags.json`)
-    utilTags4 = await response4.json()
-    const response3 = await fetch(`_utils/tags.json`)
-    utilTags2 = await response3.json()
-    const response2 = await fetch(`_utils/utilTags.json`)
-    utilTags = await response2.json()
     const response = await fetch(`api/tags.json`)
     tags = await response.json()
   })
