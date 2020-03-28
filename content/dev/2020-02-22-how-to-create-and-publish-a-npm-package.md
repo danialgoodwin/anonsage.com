@@ -36,7 +36,7 @@ The first section show how to publish the npm package, then the second section s
 
 5. Create '.gitignore' and add the following content ('npm pack' in the next step uses this file):
 
-    ```text
+    ```javascript
     *.tgz
     .idea/
     node_modules/
@@ -70,7 +70,7 @@ The first section show how to publish the npm package, then the second section s
 
 4. Run your project: `node index.js`
 
-    ```text
+    ```javascript
     // Output
     Hello, World!
     true
