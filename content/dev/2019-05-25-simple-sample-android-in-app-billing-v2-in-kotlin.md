@@ -4,7 +4,6 @@ tags:
 - Android
 - Kotlin
 ---
-
 Over the course of a few days this week, for my side project, I implemented Android in-app billing v2 in Kotlin. It took about 5 hours to read through everything and implement it, but it should have taken less than an hour with the right sample code and walk-through.
 
 This is that walk-through that I would have wanted to just quickly implement subscription services in my app.

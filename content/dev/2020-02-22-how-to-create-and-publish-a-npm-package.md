@@ -21,22 +21,26 @@ The first section show how to publish the npm package, then the second section s
     2. Follow the interactive steps until the package.json file is created. At least add a name and email.
 4. Create 'index.js' and add the following content as an example:
 
-        const utils = {
-          isOdd (num) {
-            return num % 2 === 1
-          },
-          sayHello () {
-            console.log('Hello, World!')
-          }
-        }
-        
-        module.exports = utils
+   ```javascript
+    const utils = {
+      isOdd (num) {
+        return num % 2 === 1
+      },
+      sayHello () {
+        console.log('Hello, World!')
+      }
+    }
+    
+    module.exports = utils
+    ```
 
 5. Create '.gitignore' and add the following content ('npm pack' in the next step uses this file):
 
-        *.tgz
-        .idea/
-        node_modules/
+    ```gitignore
+    *.tgz
+    .idea/
+    node_modules/
+    ```
 
 6. (Optional) Ensure that the correct files will be uploaded for the npm package:
     1. Run: `npm pack`
@@ -57,17 +61,21 @@ The first section show how to publish the npm package, then the second section s
         - Sidenote: An equivalent command is 'npm i -S <my-npm-package-name>'
 3. Create 'index.js' and add the following content as an example (and replace <my-npm-package-name> below):
 
-        const utils = require('<my-npm-package-name>')
-        utils.sayHello()
-        console.log(utils.idOdd(1))
-        console.log(utils.idOdd(2))
+    ```javascript
+    const utils = require('<my-npm-package-name>')
+    utils.sayHello()
+    console.log(utils.idOdd(1))
+    console.log(utils.idOdd(2))
+    ```
 
 4. Run your project: `node index.js`
 
-        // Output
-        Hello, World!
-        true
-        false
+    ```text
+    // Output
+    Hello, World!
+    true
+    false
+    ```
 
 Congrats on creating your new npm package! :)
 

@@ -5,7 +5,6 @@ tags:
 - Azure
 - Postman
 ---
-
 The title says it all, so let's jump right in! Hopefully, I haven't missed any steps, but it's possible. So, let me know if there are any issues or if there are any steps that I should clarify.
 
 1. Create Azure Service Bus
@@ -15,45 +14,47 @@ The title says it all, so let's jump right in! Hopefully, I haven't missed any s
 1. Create SAS token
     1. Create a new C# project with the following code:
     
-            using System;
-            using System.Globalization;
-            using System.Security.Cryptography;
-            using System.Text;
-            using System.Web;
-            
-            class MainClass
+        ```javascript
+        using System;
+        using System.Globalization;
+        using System.Security.Cryptography;
+        using System.Text;
+        using System.Web;
+        
+        class MainClass
+        {
+        
+            static readonly string queueOrTopicUrl = "TODO"; // Format: "https://<service bus namespace>.servicebus.windows.net/<topic name or queue>/messages";
+            static readonly string signatureKeyName = "TODO";
+            static readonly string signatureKey = "TODO";
+            static readonly TimeSpan timeToLive = TimeSpan.FromDays(1);
+        
+            public static void Main(string[] args)
             {
-            
-                static readonly string queueOrTopicUrl = "TODO"; // Format: "https://<service bus namespace>.servicebus.windows.net/<topic name or queue>/messages";
-                static readonly string signatureKeyName = "TODO";
-                static readonly string signatureKey = "TODO";
-                static readonly TimeSpan timeToLive = TimeSpan.FromDays(1);
-            
-                public static void Main(string[] args)
-                {
-                    var token = GetSasToken(queueOrTopicUrl, signatureKeyName, signatureKey, timeToLive);
-                    Console.WriteLine("Authorization: " + token);
-                }
-            
-                public static string GetSasToken(string resourceUri, string keyName, string key, TimeSpan ttl)
-                {
-                    var expiry = GetExpiry(ttl);
-                    string stringToSign = HttpUtility.UrlEncode(resourceUri) + "\n" + expiry;
-                    HMACSHA256 hmac = new HMACSHA256(Encoding.UTF8.GetBytes(key));
-                    var signature = Convert.ToBase64String(hmac.ComputeHash(Encoding.UTF8.GetBytes(stringToSign)));
-                    var sasToken = String.Format(CultureInfo.InvariantCulture, "SharedAccessSignature sr={0}&sig={1}&se={2}&skn={3}",
-                    HttpUtility.UrlEncode(resourceUri), HttpUtility.UrlEncode(signature), expiry, keyName);
-                    return sasToken;
-                }
-            
-                private static string GetExpiry(TimeSpan ttl)
-                {
-                    TimeSpan expirySinceEpoch = DateTime.UtcNow - new DateTime(1970, 1, 1) + ttl;
-                    return Convert.ToString((int)expirySinceEpoch.TotalSeconds);
-                }
-            
+                var token = GetSasToken(queueOrTopicUrl, signatureKeyName, signatureKey, timeToLive);
+                Console.WriteLine("Authorization: " + token);
             }
-            
+        
+            public static string GetSasToken(string resourceUri, string keyName, string key, TimeSpan ttl)
+            {
+                var expiry = GetExpiry(ttl);
+                string stringToSign = HttpUtility.UrlEncode(resourceUri) + "\n" + expiry;
+                HMACSHA256 hmac = new HMACSHA256(Encoding.UTF8.GetBytes(key));
+                var signature = Convert.ToBase64String(hmac.ComputeHash(Encoding.UTF8.GetBytes(stringToSign)));
+                var sasToken = String.Format(CultureInfo.InvariantCulture, "SharedAccessSignature sr={0}&sig={1}&se={2}&skn={3}",
+                HttpUtility.UrlEncode(resourceUri), HttpUtility.UrlEncode(signature), expiry, keyName);
+                return sasToken;
+            }
+        
+            private static string GetExpiry(TimeSpan ttl)
+            {
+                TimeSpan expirySinceEpoch = DateTime.UtcNow - new DateTime(1970, 1, 1) + ttl;
+                return Convert.ToString((int)expirySinceEpoch.TotalSeconds);
+            }
+        
+        }
+        ```
+   
     2. In the code, update the fields:
         - `queueUrl`: Find this value in Azure Portal > your Service Bus Namespace > 'Queues' or 'Topics', then click on the specific entity, then copy the value for 'Queue URL' or 'Topic URL'
         - `signatureKeyName`: Find this value in Azure Portal > your Service Bus Namespace > 'Shared access policies', then under the 'Policy' column

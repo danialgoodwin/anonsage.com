@@ -12,48 +12,55 @@ Here's the minimal steps needed to get a website created with Svelte.js and Parc
 2. Install dependencies: `npm i -D svelte parcel-bundler parcel-plugin-svelte @babel/polyfill`
 3. Create 'index.html' with the following code:
 
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-          <meta charset="UTF-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-          <title>Parcel Plugin Svelte Example</title>
-        </head>
-        <body>
-        <div id="demo"></div>
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <title>Parcel Plugin Svelte Example</title>
+    </head>
+    <body>
+    <div id="demo"></div>
 
-        <!-- This script tag points to the source of the JS file we want to load and bundle -->
-        <script src="main.js"></script>
-        </body>
-        </html>
+    <!-- This script tag points to the source of the JS file we want to load and bundle -->
+    <script src="main.js"></script>
+    </body>
+    </html>
+   ```
 
 4. Create 'main.js':
 
-        import '@babel/polyfill';
-        import App from "./App.svelte";
+    ```javascript
+    import '@babel/polyfill';
+    import App from "./App.svelte";
 
-        const app = new App({
-          target: document.getElementById('demo'),
-          data: {
-            name: 'world'
-          }
-        });
+    const app = new App({
+      target: document.getElementById('demo'),
+      data: {
+        name: 'world'
+      }
+    });
+   ```
 
 5. Create 'App.svelte':
 
-        <p>Hello, {name}!</p>
-        
-        <script>
-          export let name = 'Anonymous';
-        </script>
+    ```html
+    <p>Hello, {name}!</p>
+    <script>
+      export let name = 'Anonymous';
+    </script>
+    ```
 
 6. Update the 'script' block in 'package.json':
 
-          "scripts": {
-            "start": "parcel index.html",
-            "build": "parcel build index.html"
-          }
+    ```json
+    "scripts": {
+      "start": "parcel index.html",
+      "build": "parcel build index.html"
+    }
+    ```
 
 7. Run the app locally: `npm run start`
 8. Go to localhost to see your site (i.e., http://localhost:1234) and you should see the output `Hello, Anonymous!`
