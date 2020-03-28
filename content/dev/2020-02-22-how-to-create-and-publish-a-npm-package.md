@@ -36,7 +36,7 @@ The first section show how to publish the npm package, then the second section s
 
 5. Create '.gitignore' and add the following content ('npm pack' in the next step uses this file):
 
-    ```gitignore
+    ```text
     *.tgz
     .idea/
     node_modules/
