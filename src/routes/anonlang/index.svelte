@@ -27,34 +27,34 @@
 
 Output 'Hello, World!':
 <pre><code>
-  'Hello, World!'
+'Hello, World!'
 </code></pre>
 
 Simple Temperature converter:
 <pre><code>
-  fahrenheit = celsius * 1.8 + 32
-  'Fahrenheit: ' &lt;input id=fah type=number bind=solve(fahrenheit, celsius=cel)>
-  'Celsius: ' &lt;input id=cel type=number bind=solve(celsius, fahrenheit=fah)>
+fahrenheit = celsius * 1.8 + 32
+'Fahrenheit: ' &lt;input id=fah type=number bind=solve(fahrenheit, celsius=cel)>
+'Celsius: ' &lt;input id=cel type=number bind=solve(celsius, fahrenheit=fah)>
 </code></pre>
 
 Simple TODO list with local and remote storage:
 <pre><code>
-  storage_key = 'tasks'
-  pref_key = 'user_storage_type_pref'
-  local_storage = platform.storage
-  remote_storage = url(https://example.com/api/storage)
-  user_storage = local_storage(pref_key) otherwise remote_storage(pref_key) otherwise local_storage
-  get_tasks() = user_storage(storage_key) otherwise mutable_list()
-  tasks = get_tasks()
-  save_task(value) = tasks.add(value) then user_storage(storage_key).add(value)
-  remove_task(value) = tasks.remove(value) then user_storage(storage_key).remove(value)
-  set_user_storage_type(storage_type) = local_storage(pref_key).set(storage_type) then remote_storage(pref_key).set(storage_type) then user_storage.update() then tasks.update()
+storage_key = 'tasks'
+pref_key = 'user_storage_type_pref'
+local_storage = platform.storage
+remote_storage = url(https://example.com/api/storage)
+user_storage = local_storage(pref_key) otherwise remote_storage(pref_key) otherwise local_storage
+get_tasks() = user_storage(storage_key) otherwise mutable_list()
+tasks = get_tasks()
+save_task(value) = tasks.add(value) then user_storage(storage_key).add(value)
+remove_task(value) = tasks.remove(value) then user_storage(storage_key).remove(value)
+set_user_storage_type(storage_type) = local_storage(pref_key).set(storage_type) then remote_storage(pref_key).set(storage_type) then user_storage.update() then tasks.update()
 
-  &lt;checkbox text='Use remote storage?'
-            on_check=set_user_storage_type(remote_storage)
-            on_uncheck=set_user_storage_type(local_storage)>
-  &lt;input hint='Add a task' on_key_enter=save_task(input.text)>
-  &lt;list bind=tasks template(task)=`&lt;checkbox on_check=remove_task(task)> task`>
+&lt;checkbox text='Use remote storage?'
+          on_check=set_user_storage_type(remote_storage)
+          on_uncheck=set_user_storage_type(local_storage)>
+&lt;input hint='Add a task' on_key_enter=save_task(input.text)>
+&lt;list bind=tasks template(task)=`&lt;checkbox on_check=remove_task(task)> task`>
 </code></pre>
 
 
