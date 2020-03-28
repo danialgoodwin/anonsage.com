@@ -26,9 +26,9 @@
 <p>I like thinking about programming language design. So, here's a few thoughts and sample syntax of the latest iteration I'm working on:</p>
 
 Output 'Hello, World!':
-<code>
+<pre><code>
   'Hello, World!'
-</code>
+</code></pre>
 
 Simple Temperature converter:
 <pre><code>
