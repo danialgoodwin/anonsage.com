@@ -58,5 +58,6 @@
     <li><a rel=prefetch aria-current='{segment === "dev" ? "page" : undefined}' href='dev'>dev</a></li>
     <li><a rel=prefetch aria-current='{segment === "random" ? "page" : undefined}' href='random'>random</a></li>
     <li><a rel=prefetch aria-current='{segment === "anonlang" ? "page" : undefined}' href='anonlang'>anonlang</a></li>
+    <li><a rel=prefetch aria-current='{segment === "products" ? "page" : undefined}' href='products'>products</a></li>
   </ul>
 </nav>
