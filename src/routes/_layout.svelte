@@ -19,4 +19,6 @@
 
 <main>
   <slot></slot>
+  <script data-goatcounter="https://anonsage.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
 </main>
