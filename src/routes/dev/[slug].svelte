@@ -13,6 +13,11 @@
 </script>
 
 <script>
+  import {onMount} from 'svelte'
+  onMount(async () => {
+    window.goatcounter.count()
+  })
+
   export let post
 </script>
 

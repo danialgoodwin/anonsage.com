@@ -75,8 +75,8 @@ define:
 fahrenheit = celsius * 1.8 + 32
 
 show:
-'Fahrenheit:' <input id=fah type=number bind=solve(fahrenheit, celsius=cel)>
-'Celsius:' <input id=cel type=number bind=solve(celsius, fahrenheit=fah)>
+'Fahrenheit: ' <input id=fah type=number bind=solve(fahrenheit, celsius=cel)>
+'Celsius: ' <input id=cel type=number bind=solve(celsius, fahrenheit=fah)>
 ```
 
 Here's what that could look like at a minimum:

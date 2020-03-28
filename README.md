@@ -10,6 +10,7 @@
 - Add short description to post YAML to be shown on the blog posts pages
 - Add topics filter, choose one tag, and provide count?
 - Maybe add an anonlang/ route that can act exactly like a blog, but without dates. Or, dates is fine too?
+- Experiment more with goatcounter analytics: https://anonsage.goatcounter.com/
 
 
 
