@@ -1,6 +1,6 @@
 <script context="module">
   export function preload({params, query}) {
-    return this.fetch(`dev.json`).then(r => r.json()).then(posts => {
+    return this.fetch(`anonlang.json`).then(r => r.json()).then(posts => {
       return {posts}
     })
   }
@@ -51,8 +51,8 @@ remove_task(value) = tasks.remove(value) then user_storage(storage_key).remove(v
 set_user_storage_type(storage_type) = local_storage(pref_key).set(storage_type) then remote_storage(pref_key).set(storage_type) then user_storage.update() then tasks.update()
 
 &lt;checkbox text='Use remote storage?'
-          on_check=set_user_storage_type(remote_storage)
-          on_uncheck=set_user_storage_type(local_storage)>
+    on_check=set_user_storage_type(remote_storage)
+    on_uncheck=set_user_storage_type(local_storage)>
 &lt;input hint='Add a task' on_key_enter=save_task(input.text)>
 &lt;list bind=tasks template(task)=`&lt;checkbox on_check=remove_task(task)> task`>
 </code></pre>
@@ -64,6 +64,6 @@ set_user_storage_type(storage_type) = local_storage(pref_key).set(storage_type) 
 				tell Sapper to load the data for the page as soon as
 				the user hovers over the link or taps it, instead of
 				waiting for the 'click' event -->
-      <li><a rel='prefetch' href='dev/{post.slug}'>{post.title}</a></li>
+      <li><a rel='prefetch' href='anonlang/{post.slug}'>{post.title}</a></li>
     {/each}
 </ul>

@@ -3,7 +3,7 @@ import path from 'path'
 import grayMatter from 'gray-matter'
 
 export const getAllTags = () => {
-  const categories = ['dev', 'random']
+  const categories = ['anonlang', 'dev', 'random']
   const tags = new Set()
   for (const category of categories) {
     const posts = getAllPosts(category)
@@ -54,5 +54,6 @@ export const getSiblingPosts = (slug) => {
   return siblingPosts
 }
 
+export const allAnonlangPosts = getAllPosts('anonlang')
 export const allDevPosts = getAllPosts('dev')
 export const allRandomPosts = getAllPosts('random')
