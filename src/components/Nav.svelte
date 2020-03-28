@@ -57,5 +57,6 @@
          the dev data when we hover over the link or tap it on a touchscreen -->
     <li><a rel=prefetch aria-current='{segment === "dev" ? "page" : undefined}' href='dev'>dev</a></li>
     <li><a rel=prefetch aria-current='{segment === "random" ? "page" : undefined}' href='random'>random</a></li>
+    <li><a rel=prefetch aria-current='{segment === "anonlang" ? "page" : undefined}' href='anonlang'>anonlang</a></li>
   </ul>
 </nav>

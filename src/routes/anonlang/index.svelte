@@ -50,11 +50,11 @@ Simple TODO list with local and remote storage:
   remove_task(value) = tasks.remove(value) then user_storage(storage_key).remove(value)
   set_user_storage_type(storage_type) = local_storage(pref_key).set(storage_type) then remote_storage(pref_key).set(storage_type) then user_storage.update() then tasks.update()
 
-  <checkbox text='Use remote storage?'
+  &lt;checkbox text='Use remote storage?'
             on_check=set_user_storage_type(remote_storage)
             on_uncheck=set_user_storage_type(local_storage)>
-  <input hint='Add a task' on_key_enter=save_task(input.text)>
-  <list bind=tasks template(task)=`<checkbox on_check=remove_task(task)> task`>
+  &lt;input hint='Add a task' on_key_enter=save_task(input.text)>
+  &lt;list bind=tasks template(task)=`&lt;checkbox on_check=remove_task(task)> task`>
 </code></pre>
 
 
