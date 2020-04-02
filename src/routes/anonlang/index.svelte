@@ -58,6 +58,21 @@ set_user_storage_type(storage_type) = local_storage(pref_key).set(storage_type) 
 </code></pre>
 
 
+
+<h2>Basic Syntax</h2>
+
+- Data types and interfaces: Iterable, Text, Number, List, Set, Map, View
+    - Casting: `.to*`
+- Control logic: if-else, loop-in,
+    Ex: `if isTrue() loop char in row in file doSomething(char) else doSomethingElse()`
+
+<h3>Open questions</h3>
+- `then` can used the same/similar to bash's pipe |
+- Can calling a variable and 0-arg function be done the same way? Ceylon?
+
+
+
+<h2>Posts:</h2>
 <ul>
     {#each posts as post}
     <!-- we're using the non-standard `rel=prefetch` attribute to
