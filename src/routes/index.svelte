@@ -47,6 +47,7 @@
   <figcaption>HIGH FIVE!</figcaption>
 </figure>
 
+<p>Saving the world one byte at a time. Experience what the faster and better the web should be.</p>
 <p><strong>What software development topics are you interested in?</strong></p>
 
   <!--TODO: Create a topics/ route-->
