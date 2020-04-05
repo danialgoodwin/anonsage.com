@@ -62,3 +62,29 @@ now
 ## Notes
 - Background color: whitesmoke (#f5f5f5)
 - Theme color: Material design's 'deep orange 500' (#FF5722) 
+
+
+
+## Resources
+- https://www.mahmoudashraf.dev/blog/build-a-blog-with-svelte-and-markdown
+- https://blog.logrocket.com/consuming-rest-apis-in-svelte/
+- https://dev.to/jpblancodb/create-a-blog-with-svelte-and-dev-to-api-176j
+- https://github.com/Jordan-Rowland/flask-svelte-trello
+- https://github.com/GeekyAnts/sb-admin-svelte
+- https://github.com/karkranikhil/voice-notes
+- https://github.com/moegi-design/ghost-theme-Moegi
+- https://madewithsvelte.com/how-much-to-make-an-app
+- https://madewithsvelte.com/typerunnerjs
+- https://github.com/itswadesh/sapper-ecommerce
+- https://github.com/sveltejs/realworld
+- https://hn.svelte.dev/top/1
+
+### Libraries
+- https://github.com/hperrin/svelte-material-ui
+- https://robbrazier.github.io/svelte-awesome/
+- https://github.com/Cweili/svelte-fa
+- https://github.com/codediodeio/sveltefire
+- https://github.com/beyonk-adventures/svelte-social-auth
+- https://github.com/bestguy/sveltestrap
+- https://github.com/RedHatter/svelte-devtools
+
