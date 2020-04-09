@@ -44,7 +44,7 @@
               points="1526.44 297.55 1247.44 36.55 650.03 574.89 1247.44 1114.78 2390.43 35 2981.44 574.89 2390.44 1114.78 2120.44 864.55"/>
     <polyline class="cls-1" points="3026.77 35 3530.94 574.89 3026.77 1114.78"/>
   </svg>
-  <figcaption>HIGH FIVE!</figcaption>
+  <figcaption>&lt;Anonsage Infinite Code&gt;</figcaption>
 </figure>
 
 <p>Saving the world one byte at a time. Experience what the faster and better the web should be.</p>
