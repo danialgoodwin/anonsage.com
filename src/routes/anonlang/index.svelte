@@ -27,7 +27,7 @@
 
 Output 'Hello, World!':
 <pre><code>
-'Hello, World!'
+&lt;h1 'Hello, World!'>
 </code></pre>
 
 Simple Temperature converter:
@@ -35,6 +35,15 @@ Simple Temperature converter:
 fahrenheit = celsius * 1.8 + 32
 'Fahrenheit: ' &lt;input id=fah type=number bind=solve(fahrenheit, celsius=cel)>
 'Celsius: ' &lt;input id=cel type=number bind=solve(celsius, fahrenheit=fah)>
+</code></pre>
+
+Alternatively:
+<pre><code>
+fah = &lt;input type=number>
+cel = &lt;input type=number>
+fah = cel * 1.8 + 32
+'Fahrenheit: ' &lt;fah>
+'Celsius: ' &lt;cel>
 </code></pre>
 
 Simple TODO list with local and remote storage:
