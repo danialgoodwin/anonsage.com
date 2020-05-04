@@ -80,7 +80,12 @@ set_user_storage_type(storage_type) = local_storage(pref_key).set(storage_type) 
 - Can calling a variable and 0-arg function be done the same way? Ceylon?
 - Exact syntax for blocks.
     - A reason to not use 'end' is because it is  syntactic noise. It draws attention when it doesn't need to. Hmm, that's why Python is good, because of less syntactic noise because it uses whitespace instead.
+- Allow variables to show? Probably not. From this example, we can see that it can get confusing. We would have to use capital letters for GUI classes.
 
+        a = 'Hello'
+        b = list('a', 'b', 'c')
+        <a>
+        <b>
 
 
 <h2>Posts:</h2>
