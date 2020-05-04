@@ -78,6 +78,8 @@ set_user_storage_type(storage_type) = local_storage(pref_key).set(storage_type) 
 <h3>Open questions</h3>
 - `then` can used the same/similar to bash's pipe |
 - Can calling a variable and 0-arg function be done the same way? Ceylon?
+- Exact syntax for blocks.
+    - A reason to not use 'end' is because it is  syntactic noise. It draws attention when it doesn't need to. Hmm, that's why Python is good, because of less syntactic noise because it uses whitespace instead.
 
 
 
