@@ -87,6 +87,12 @@ set_user_storage_type(storage_type) = local_storage(pref_key).set(storage_type) 
         <a>
         <b>
 
+- Should it have the ability to include other languages ver-batim? Maybe use the triple backtick syntax with language name.
+- How to tell the difference between the Math `<` and the beginning of a view `<`? Use `lt`? Meh.
+- Safari has shortcuts for 'open new email message with content of a page' (command + I), 'open new email message containing only the URL of a page' (command + shift + I). BUT, Maybe a more universal shortcut would be to first have a combination to open a 'share' screen, then perhaps another letter to choose email/text/another app. Default could be just whole page or URL, or selection or focus-click-drag, like a screenshot. Maybe rather than a shortcut to share URL, it should be a shortcut to share a selection... that way it can cover URL (command + l) and page content
+- If we want commands to be 'pipeable', then maybe a regular screenshot first to clipboard, then command to share clipboard contents
+
+
 
 <h2>Posts:</h2>
 <ul>
